@@ -6,7 +6,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -31,5 +31,5 @@ model Orden {
   nombre String
   fecha String
   total Float
-  pedido String
+  pedido Json
 }
